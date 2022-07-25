@@ -1,0 +1,163 @@
+/* ======================= CONFIG ======================== */
+
+/* Dev temp */
+
+body * {
+  /* border: 1px solid red; */
+}
+
+/* Reset */
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+/* ========================/CONFIG ======================= */
+
+/* ======================= VARIABLES ======================== */
+
+:root {
+  --dark-background: #354052;
+  --light-font: #a6b1c3;
+  --medium-background: #edf2f6;
+  --grey-border: #f2f2f4;
+  --hr-dark: #2c3749;
+  --hr-light: #384355;
+}
+
+/* =======================/VARIABLES ======================== */
+
+/* ======================== LAYOUT ======================= */
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+
+  min-height: 100vh;
+  width: 100vw;
+}
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+  width: 290px;
+  overflow: hidden;
+}
+
+#main-section {
+  width: calc(100% - 290px);
+
+  display: flex;
+  flex-direction: column;
+}
+
+#user-profile {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: center;
+
+  height: 250px;
+}
+
+.profile-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-link-list, .sidebar-category-list {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-evenly;
+
+  margin-left: 50px;
+}
+
+.sidebar-link-list a {
+  margin: 15px;
+}
+
+hr {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  /* box-shadow: 0px 12px 12px 0px rgb(0, 0, 0, 0.75); */
+}
+
+hr:first-of-type {
+  margin-top: 5px;
+}
+
+#topbar {
+  height: 110px;
+}
+
+#infoheading {
+  height: 280px;
+}
+
+#infobody {
+  height: calc(100% - 280px - 110px)
+}
+
+/* ========================/LAYOUT ======================= */
+
+/* ======================== STYLE ======================= */
+
+#sidebar {
+  background-color: var(--dark-background);
+  color: var(--light-font);
+}
+
+hr {
+  border: 1px solid var(--hr-dark);
+  box-shadow: -4px 0px 3px 5px var(--hr-light);
+}
+
+.big.profile-picture {
+  height: 120px;
+  aspect-ratio: 1/1;
+}
+
+.profile-picture{
+  border-radius: 100px;
+  background-color: black;
+  overflow: hidden;
+}
+
+.profile-box p {
+  margin-top: 30px;
+}
+
+.profile-box p span {
+  vertical-align: text-top;
+}
+
+.sidebar-link-list a {
+  text-transform: uppercase;
+  font-size: small;
+}
+
+#topbar {
+  border: var(--grey-border) 1.5px solid;
+}
+
+#infoheading {
+  border: var(--grey-border) 1.5px solid;
+}
+
+#infobody {
+  border: var(--grey-border) 1px solid;
+  background-color: var(--medium-background);
+}
+
+/* ======================== /STYLE ======================= */
